@@ -1,8 +1,13 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Sites') }}
-        </h2>
+        <div class="flex flex-wrap items-center">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight pr-4">
+                {{ __('Sites') }}
+            </h2>
+            <a href="/sites/create" class="bg-blue-400 py-3 px-2 rounded text-white">
+                Create A Site
+            </a>
+        </div>
     </x-slot>
 
     <div class="py-12">

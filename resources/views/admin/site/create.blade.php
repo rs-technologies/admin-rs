@@ -10,7 +10,6 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <form action="/sites" method="POST">
                         @csrf
-                        {{print_r($errors->all())}}
                         <div class="form-group pb-2 ">
                             <label>Site Name:</label>
                             <input type="text" class="w-full rounded @if($errors->has('name')) border-red-300  @else border-gray-300 @endif" name="name" />
