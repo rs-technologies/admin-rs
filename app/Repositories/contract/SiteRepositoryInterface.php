@@ -10,4 +10,6 @@ interface SiteRepositoryInterface
 
     public function store(array $site);
 
+	public function update($site);
+
 }

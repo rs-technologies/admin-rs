@@ -4,15 +4,19 @@
             {{ __('Sites') }}
         </h2>
     </x-slot>
+
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <form action="/sites" method="POST">
+                    <form action="/sites/@if(!empty($site->id)){{$site->id}}@endif" method="POST">
                         @csrf
+                        @if(!empty($site->id))
+                            @method('PUT')
+                        @endif
                         <div class="form-group pb-2 ">
                             <label>Site Name:</label>
-                            <input type="text" class="w-full rounded @if($errors->has('name')) border-red-300  @else border-gray-300 @endif" name="name" />
+                            <input type="text" value="{{$site->name}}" class="w-full rounded @if($errors->has('name')) border-red-300  @else border-gray-300 @endif" name="name" />
                         </div>
                         <div class="form-group pb-2">
                             <label>Domain Name:</label>
@@ -21,7 +25,7 @@
                                     <span class="px-3">https://</span>
                                 </div>
                                 <div class="flex-1">
-                                    <input type="text" class="w-full @if($errors->has('domain')) border-red-300  @else border-gray-300 @endif" name="domain"  />
+                                    <input type="text" value="{{$site->domain}}" class="w-full @if($errors->has('domain')) border-red-300  @else border-gray-300 @endif" name="domain"  />
                                 </div>
                                 <div class="items-center flex flex-wrap bg-gray-300 rounded-r">
                                     <span class="px-3">rstechnologies.com.au</span>
@@ -38,7 +42,7 @@
                                     </select>
                                 </div>
                                 <div class="flex-1">
-                                    <input type="text" class="w-full rounded-r border-gray-300" name="custom_domain"  />
+                                    <input type="text" value="{{$site->custom_domain}}" class="w-full rounded-r border-gray-300" name="custom_domain"  />
                                 </div>
                             </div>
                         </div>

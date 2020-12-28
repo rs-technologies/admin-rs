@@ -61,6 +61,7 @@ class SiteRepository implements SiteRepositoryInterface
         ])->asForm()->post(env("WP_ADMIN_URL"), [
             'domain' => $domain
         ]);
+
         $response=intval($response->body());
         if ( $response=== 0) {
             return false;
@@ -75,12 +76,12 @@ class SiteRepository implements SiteRepositoryInterface
             'build_settings' => array(
                 'env' => array(
                     'SITE_URL' => $domain,
-                    'GRAPHQL_URL' => $domain . "/graphql",
+                    'GRAPHQL_URL' => $domain . "graphql",
                 )
             ),
             'repo' => array(
-                'repo_path' => "eclatsujan/gastby_theme",
-                "repo_url"=>"https://github.com/eclatsujan/gastby_theme",
+                'repo_path' => env("GIT_REPO_PATH"),
+                "repo_url"=>env("GIT_REPO_URL"),
                 'public_repo' => false,
                 'deploy_key_id' => env('NETLIFY_DEPLOY'),
                 'cmd' => 'gatsby build',
@@ -97,5 +98,10 @@ class SiteRepository implements SiteRepositoryInterface
         }
 
         return json_decode($response->body());
+    }
+
+    public function update($site)
+    {
+        // TODO: Implement update() method.
     }
 }

@@ -12,6 +12,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Redirect;
 
 class SitesController extends Controller
 {
@@ -65,12 +66,13 @@ class SitesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return Response
+     * @param int $id
+     * @return Application|Factory|View
      */
-    public function show($id)
+    public function show(int $id)
     {
-        //
+        $site=Site::find($id);
+        return view('admin.site.view',compact('site'));
     }
 
     /**
@@ -89,13 +91,16 @@ class SitesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
-     * @param  int  $id
-     * @return Response
+     * @param SiteRequest $request
+     * @param int $id
+     * @return RedirectResponse
      */
-    public function update(Request $request, $id)
+    public function update(SiteRequest $request, $id)
     {
         //
+        $site=Site::find($id);
+        $this->siteRepo->update($site);
+        return Redirect::back()->with(['msg'=>'Successfully Updated']);
     }
 
     /**
