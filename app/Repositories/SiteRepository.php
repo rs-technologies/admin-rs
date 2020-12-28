@@ -88,7 +88,7 @@ class SiteRepository implements SiteRepositoryInterface
                 'dir' => 'public/',
                 'env' => array(
                     'SITE_URL' => $domain,
-                    'GRAPHQL_URL' => $domain . "/graphql",
+                    'GRAPHQL_URL' => $domain . "graphql",
                 )
             )
         ]);
