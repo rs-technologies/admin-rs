@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b37fce3-d414-470d-a829-62f8809cfe10" name="Default Changelist" comment="" />
+    <list default="true" id="8b37fce3-d414-470d-a829-62f8809cfe10" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Services/Netlify.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/Service.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/Wordpress.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SitesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SitesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/SiteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/SiteRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_20_103938_sites.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_20_103938_sites.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/site/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/site/create.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +21,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -130,6 +144,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -159,55 +174,21 @@
       <updated>1608446333627</updated>
       <workItem from="1608446334644" duration="6967000" />
       <workItem from="1608525890275" duration="18774000" />
-      <workItem from="1609045322694" duration="9501000" />
+      <workItem from="1609045322694" duration="10679000" />
+      <workItem from="1609147238694" duration="7024000" />
+      <workItem from="1609280436971" duration="166000" />
+      <workItem from="1609280653849" duration="7388000" />
+      <workItem from="1609797162929" duration="140000" />
+      <workItem from="1609797353901" duration="1152000" />
+      <workItem from="1610445299501" duration="395000" />
+      <workItem from="1610662096510" duration="1304000" />
+      <workItem from="1610665575221" duration="543000" />
+      <workItem from="1611563483785" duration="545000" />
+      <workItem from="1611871412439" duration="3947000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="320" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608452269248">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state x="320" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.830@0.23.1440.830" timestamp="1608452269248" />
-    <state x="522" y="127" key="#com.intellij.ide.util.MemberChooser" timestamp="1609065886605">
-      <screen x="0" y="23" width="1440" height="831" />
-    </state>
-    <state x="522" y="127" key="#com.intellij.ide.util.MemberChooser/0.23.1440.830@0.23.1440.830" timestamp="1608539820426" />
-    <state x="522" y="127" key="#com.intellij.ide.util.MemberChooser/0.23.1440.831@0.23.1440.831" timestamp="1609065886605" />
-    <state x="408" y="200" key="DUMP_DIALOG_DIMENSION_KEY" timestamp="1609052596971">
-      <screen x="0" y="23" width="1440" height="831" />
-    </state>
-    <state x="408" y="200" key="DUMP_DIALOG_DIMENSION_KEY/0.23.1440.831@0.23.1440.831" timestamp="1609052596971" />
-    <state width="257" height="457" key="HiddenNamespacesPopup" timestamp="1608452622880">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state width="257" height="457" key="HiddenNamespacesPopup/0.23.1440.830@0.23.1440.830" timestamp="1608452622880" />
-    <state x="421" y="171" key="NewPhpClassDialog" timestamp="1608454988649">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state x="421" y="171" key="NewPhpClassDialog/0.23.1440.830@0.23.1440.830" timestamp="1608454988649" />
-    <state x="625" y="322" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1608452632642">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state x="625" y="322" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.23.1440.830@0.23.1440.830" timestamp="1608452632642" />
-    <state x="564" y="261" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1609042866059">
-      <screen x="0" y="23" width="1440" height="832" />
-    </state>
-    <state x="564" y="261" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1440.832@0.23.1440.832" timestamp="1609042866059" />
-    <state x="418" y="193" width="604" height="490" key="find.popup" timestamp="1609052049349">
-      <screen x="0" y="23" width="1440" height="831" />
-    </state>
-    <state x="418" y="193" width="604" height="490" key="find.popup/0.23.1440.831@0.23.1440.831" timestamp="1609052049349" />
-    <state x="385" y="199" key="run.anything.popup" timestamp="1609052499478">
-      <screen x="0" y="23" width="1440" height="831" />
-    </state>
-    <state x="385" y="199" key="run.anything.popup/0.23.1440.831@0.23.1440.831" timestamp="1609052499478" />
-    <state x="384" y="180" width="670" height="676" key="search.everywhere.popup" timestamp="1609039669333">
-      <screen x="0" y="23" width="1440" height="832" />
-    </state>
-    <state x="384" y="180" width="670" height="676" key="search.everywhere.popup/0.23.1440.832@0.23.1440.832" timestamp="1609039669333" />
-    <state x="384" y="180" width="670" height="676" key="search.everywhere.popup/0.23.1440.833@0.23.1440.833" timestamp="1608968442431" />
   </component>
 </project>

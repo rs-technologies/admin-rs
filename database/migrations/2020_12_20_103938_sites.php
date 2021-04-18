@@ -21,6 +21,7 @@ class Sites extends Migration
             $table->integer("site_id");
             $table->string("frontend_id",50);
             $table->string("frontend_url",255);
+            $table->string("build_url",255);
             $table->string("custom_domain",255)->nullable();
             $table->timestamps();
         });

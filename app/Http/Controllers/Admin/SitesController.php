@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\SiteRequest;
 use App\Models\Site;
 use App\Repositories\contract\SiteRepositoryInterface;
+use App\Services\Netlify;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class SitesController extends Controller
 {
-    private $siteRepo;
+    private $siteRepo,$netlify;
 
     public function __construct(SiteRepositoryInterface $siteRepo)
     {
@@ -56,11 +57,16 @@ class SitesController extends Controller
     {
         //
         $site=$request->all(['name','domain','custom_domain','domain_ssl']);
-        if(!$this->siteRepo->store($site)){
-            return redirect()->back()->withInput();
+        try{
+            $this->siteRepo->store($site);
+            $msg="Successfully Created a Site";
+            return redirect()->to("/sites")->with(compact('msg'));
         }
-        $msg="Successfully Created a Site";
-        return redirect()->to("/sites")->with(compact('msg'));
+        catch(\Exception $e){
+            return redirect()->back()->withInput()->withErrors([
+                'server_errors'=>$e->getMessage()
+            ]);
+        }
     }
 
     /**
